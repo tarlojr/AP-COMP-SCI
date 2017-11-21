@@ -35,8 +35,8 @@ public class DiceWithArrayMain {
         System.out.println("The max number was "+max+" and it is number "+position+" in the array");
         }
     public static void avg(int[] a1){
-        int sum = 0;
-        int avg = 0;
+        double sum = 0;
+        double avg = 0;
             for(int x = 0; x < a1.length; x++){
                 sum = sum+a1[x];
             }
