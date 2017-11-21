@@ -6,6 +6,7 @@ public class Dice {
         private int numRolls;
         private int roll;
         private int max;
+        private int min;
         private int position;
         
         public int roll(int i){
@@ -36,5 +37,15 @@ public class Dice {
         }
         public void display(int[]a1){
             System.out.println(Arrays.toString(a1));
+        }
+        public void min(int[] a1){
+            min = a1[0];
+        for (int x2 = 1; x2 < a1.length; x2++) {
+            if (a1[x2] < min) {
+                min = a1[x2];
+                position = x2+1;
+            }
+        }
+        System.out.println("The min number was "+min+" and it is located at number "+position+" in the array");
         }
 }

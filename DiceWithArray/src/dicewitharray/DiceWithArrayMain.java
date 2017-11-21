@@ -15,6 +15,7 @@ public class DiceWithArrayMain {
         Dice d2 = new Dice();
         d2.fillArray(a2, 100);
         d2.display(a2);
+        d2.min(a2);
         
         //Find the minimum value then display what the value is and where its located
     }
