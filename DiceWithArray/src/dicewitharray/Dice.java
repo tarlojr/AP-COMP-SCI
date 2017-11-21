@@ -27,6 +27,7 @@ public class Dice {
                 position = x2+1;
             }
         }
+        System.out.println("The max number was "+max+" and it is located at number "+position+" in the array");
         }
         public void fillArray(int[] a1, int x){
          for(int x1 = 0; x1 < a1.length; x1++){

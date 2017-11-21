@@ -7,6 +7,7 @@ public class DiceWithArrayMain {
         Dice d1 = new Dice();
         d1.fillArray(a1, 20);
         d1.display(a1);
+        d1.max(a1);
         //Find the max value and then display what the value is and where its located
             
          //array one size 50 dice values must be rolled by a factor of 100
