@@ -8,6 +8,9 @@ public class Dice {
         private int max;
         private int min;
         private int position;
+        private int sum = 0;
+        private int avg;
+        private String display;
         
         public int roll(int i){
             numRolls++;
@@ -36,7 +39,31 @@ public class Dice {
         }   
         }
         public void display(int[]a1){
-            System.out.println(Arrays.toString(a1));
+            //System.out.println(Arrays.toString(a1));
+            if(a1.length <= 10){
+                for(int x = 0; x < a1.length; x++){
+                  if(x>0){
+                      System.out.print(", ");
+                  }
+                  System.out.print(a1[x]);
+                }
+                System.out.println();
+            }
+            if(a1.length > 10){
+                int y = 0;
+                for(int x = 0; x < a1.length; x++){
+                    if(x>0){
+                    System.out.print(", ");
+                    y++;
+                    if(y == 20){
+                        System.out.println();
+                        y = 0;
+                    }
+                    }
+                    System.out.print(a1[x]);
+                }
+                System.out.println();
+            }
         }
         public void min(int[] a1){
             min = a1[0];
@@ -47,5 +74,12 @@ public class Dice {
             }
         }
         System.out.println("The min number was "+min+" and it is located at number "+position+" in the array");
+        }
+        public void avg(int[] a1){
+            for(int x = 0; x < a1.length; x++){
+                sum = sum+a1[x];
+            }
+            avg = sum/a1.length;
+            System.out.println("The average number in the array is "+avg);
         }
 }

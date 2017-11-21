@@ -8,15 +8,18 @@ public class DiceWithArrayMain {
         d1.fillArray(a1, 20);
         d1.display(a1);
         d1.max(a1);
+        d1.avg(a1);
         //Find the max value and then display what the value is and where its located
-            
+            System.out.println();
+            System.out.println();
+            System.out.println();
          //array one size 50 dice values must be rolled by a factor of 100
         int[] a2 = new int[50];
         Dice d2 = new Dice();
         d2.fillArray(a2, 100);
         d2.display(a2);
         d2.min(a2);
-        
+        d2.avg(a2);
         //Find the minimum value then display what the value is and where its located
     }
 }
