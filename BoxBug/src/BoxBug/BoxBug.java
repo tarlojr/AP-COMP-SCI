@@ -20,12 +20,6 @@ public class BoxBug extends Bug{
         if (steps < sideLength && canMove()) {
             move();
             steps++;
-            if(y == 4){
-                Grid gr = getGrid();
-                int u = (int)(Math.random())*(gr.getNumRows());
-                int i = (int)(Math.random())*(gr.getNumCols());
-                Location loc = new Location(u, i);
-            }
         } 
         else{
             turn();
@@ -36,7 +30,16 @@ public class BoxBug extends Bug{
                 y++;
             }
             if(x == false){
-                
+                y++;
+            }
+            if(y == 4){
+                Grid gr = getGrid();
+                int u = (int)(Math.random()*gr.getNumRows());
+                int i = (int)(Math.random()*gr.getNumCols());
+                Location loc1 = new Location(u, i);
+                RollingRock rock = new RollingRock(getColor());
+                rock.putSelfInGrid(gr, loc1);
+                y = 0;
             }
         }
     }
