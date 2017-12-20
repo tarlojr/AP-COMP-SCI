@@ -13,6 +13,7 @@ public class DaysOfChristmasMain {
         ArrayList<Gift> AList = new ArrayList<Gift>();
         AList.add(new aPartridgePearTree());
         AList.add(new aaTwoTurtleDoves());
+        AList.add(new aaaThreeFrenchHens());
         //System.out.println(AList.get(0).getPrice());
         int i = 0;
         while(i == 0){
@@ -31,12 +32,14 @@ public class DaysOfChristmasMain {
                 name = name + "("+ amount +")" + AList.get(y).getName() + '\n';
             }
             System.out.println("You bought" + '\n' + name);
-            System.out.println(price);
+            System.out.println("The total price for today is $" + price + '\n');
             
             for(int u = x-1; u>-1; u--){
                 price2 = price2 + AList.get(u).getPrice();
-                name2 = name2 + AList.get(u).getDay() + AList.get(u).getName() + '\n';
+                name2 = name2 + AList.get(u).getName() + '\n';
             }
+            System.out.println("You bought" + '\n' + name2);
+            System.out.println("The total price is $" + price2 + '\n');
         }
         else if(x == 13){
             System.out.println("exiting...");

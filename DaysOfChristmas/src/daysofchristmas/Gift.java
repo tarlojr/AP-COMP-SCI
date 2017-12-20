@@ -3,17 +3,16 @@ package daysofchristmas;
 public abstract class Gift {
     double price;
     String name;
-    int day;
-    public Gift(double p,String n, int d){
+    int timesCalled;
+    public Gift(double p,String n){
         price = p;
         name = n;
-        day = d;
     }
     public double getPrice(){
         return price;
     }
-    public int getDay(){
-        return day;
+    public int getTimesCalled(){
+        return timesCalled;
     }
     public String getName(){
         return name;
