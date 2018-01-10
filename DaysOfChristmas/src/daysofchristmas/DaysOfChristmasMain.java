@@ -35,7 +35,7 @@ public class DaysOfChristmasMain {
             System.out.println("The total price for today is $" + price + '\n');
             
             for(int u = x-1; u>-1; u--){
-                price2 = price2 + AList.get(u).getPrice();
+                                              price2 = price2 + AList.get(u).getPrice();
                 name2 = name2 + AList.get(u).getName() + '\n';
             }
             System.out.println("You bought" + '\n' + name2);
