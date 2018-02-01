@@ -23,23 +23,47 @@ public class TicTacToeMain {
                         p.player1();
                         p.gb();
                         p.display();
-                        while(u == true){
+                        while (u == true) {
                             p.moveP1();
+                            p.checkWin(p.x, p.y, p.player1c, p.player1n);
                             p.display();
+                            if (p.eg == true) {
+                                p.bot();
+                                p.checkWin(p.c, p.v, p.z, p.name);
+                                p.display();
+                            }
+                            if (p.eg == false) {
+                                p.reset();
+                                u = false;
+                            }
                         }
                     } else if (x == 2) {
+                        boolean h = true;
                         p.player1();
                         p.player2();
                         p.gb();
                         p.display();
+                        while (h == true){
+                        p.moveP1();
+                        p.checkWin(p.x, p.y, p.player1c, p.player1n);
+                        p.display();
+                        if(p.eg == true){
+                            p.moveP2();
+                            p.checkWin(p.x, p.y, p.player2c, p.player2n);
+                            p.display();
+                        }
+                        if(p.eg == false){
+                            p.reset();
+                            h = false;
+                        }
+                        }
                     } else {
-                        System.out.println("please enter a valid number"+'\n');
+                        System.out.println("please enter a valid number" + '\n');
                     }
-                }
-                else if (y == 2) {
+                } else if (y == 2) {
                     o = false;
                 } else {
-                    System.out.print("Please enter a valid number"+'\n');
+                    System.out.print("Please enter a valid number" + '\n');
                 }
             } catch (java.util.InputMismatchException e) {
             }
